@@ -1,2 +1,1 @@
-# Freebird
 # Freebird-server
