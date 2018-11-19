@@ -1,0 +1,12 @@
+<p-growl [value]="msgs"></p-growl>
+<p-tabView>
+  <p-tabPanel i18n-header header="Stats">
+    <freebird-admin-tab-stats [model]="statsTabModel" (onScanAllClickedEvent)="onScanAllClickedEvent($event)" (onRefreshClickedEvent)="onRefreshClickedEvent()" (onExportSitesClickedEvent)="onExportSitesClickedEvent()" (onImportSitesEvent)="onImportSitesEvent($event)"></freebird-admin-tab-stats>
+  </p-tabPanel>
+  <p-tabPanel i18n-header header="Details">
+    <freebird-admin-tab-sites [model]="sitesTabModel" (onForceScanClickedEvent)="onForceScanClickedEvent($event)" (onAddSiteClickedEvent)="onAddSiteClickedEvent($event)" (deleteSiteClickedEvent)="deleteSiteClickedEvent($event)"></freebird-admin-tab-sites>
+  </p-tabPanel>
+  <p-tabPanel i18n-header header="Users">
+    <freebird-admin-tab-users [model]="usersTabModel" (onUserAddEvent)="onUserAddEvent($event)" (onDeleteUserEvent)="onDeleteUserEvent($event)"></freebird-admin-tab-users>
+  </p-tabPanel>
+</p-tabView>

@@ -1,0 +1,25 @@
+<div *ngIf="movie">
+  <p-breadcrumb [model]="breadCrumb"></p-breadcrumb>
+
+  <div class="ui-g">
+    <div class="ui-g-3">
+      <media-poster [posterPath]="movie.posterPath" [width]="200"></media-poster>
+    </div>
+
+    <div class="ui-g-9">
+      <div class="ui-g-12">
+        <div class="ui-g-10">
+          <h3>{{movie.title}}</h3>
+        </div>
+        <div class="ui-g-2">
+          <h3>{{movie.releaseDate | date: 'y'}}</h3>
+        </div>
+      </div>
+      <div class="ui-g-12">{{movie.overview}}</div>
+
+      <div class="ui-g-6">
+        <media-links [links]="movie.links" (onBadIdentificationEvent)="onBadIdentificationEvent($event)"></media-links>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="f65253954b66e929a8b4d5ecaf61f9129f8cec64" datatype="html">
+        <source>Dashboard</source> <target></target> </trans-unit>
+      <trans-unit id="f3cf8c938d96b18e76d3be07feffb2d57dedc37f" datatype="html" approved="yes">
+        <source>Movies</source>
+        <target state="translated">Films</target>
+      </trans-unit>
+      <trans-unit id="e166ae30440b711952b586a67c655954bbbdc4ba" datatype="html" approved="yes">
+        <source>Tv Shows</source>
+        <target state="translated">Séries</target>
+      </trans-unit>
+      <trans-unit id="2fd8db76f566a3b06a4ef0ae25ec1373d6006b05" datatype="html" approved="yes">
+        <source>Identification</source>
+        <target state="translated">Identification</target>
+      </trans-unit>
+      <trans-unit id="b7648e7aced164498aa843b5c4e8f2f1c36a7919" datatype="html" approved="yes">
+        <source>Administration</source>
+        <target state="translated">Administration</target>
+      </trans-unit>
+      <trans-unit id="abc9560f949f8d0356fc83fe73642ad291491543" datatype="html" approved="yes">
+        <source>Latest movies</source>
+        <target state="translated">Derniers films</target>
+      </trans-unit>
+      <trans-unit id="9e5de95e5e97fa0a8126ab9c7175669e1b3f17d5" datatype="html" approved="yes">
+        <source>Latest episodes</source>
+        <target state="translated">Derniers episodes</target>
+      </trans-unit>
+      <trans-unit id="97a36a4c2ae1bd947d15767f48619bc3ef8bf4a3" datatype="html" approved="yes">
+        <source>Episode</source>
+        <target state="translated">Episode</target>
+      </trans-unit>
+      <trans-unit id="27859639fa32eea180edc1afe2bed2dcba15196b" datatype="html" approved="yes">
+        <source>Air date</source>
+        <target state="translated">Date de diffusion</target>
+      </trans-unit>
+      <trans-unit id="299f97b8ee9c62d45f2cc01961aa1e5101d6d05a" datatype="html" approved="yes">
+        <source>Stats</source>
+        <target state="translated">Stats</target>
+      </trans-unit>
+      <trans-unit id="4f8b2bb476981727ab34ed40fde1218361f92c45" datatype="html" approved="yes">
+        <source>Details</source>
+        <target state="translated">Détails</target>
+      </trans-unit>
+      <trans-unit id="4d13a9cd5ed3dcee0eab22cb25198d43886942be" datatype="html" approved="yes">
+        <source>Users</source>
+        <target state="translated">Utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="6765b4c916060f6bc42d9bb69e80377dbcb5e4e9" datatype="html" approved="yes">
+        <source>Login</source>
+        <target state="translated">Identification</target>
+      </trans-unit>
+      <trans-unit id="08c74dc9762957593b91f6eb5d65efdfc975bf48" datatype="html" approved="yes">
+        <source>Username</source>
+        <target state="translated">Utilisateur</target>
+      </trans-unit>
+      <trans-unit id="c32ef07f8803a223a83ed17024b38e8d82292407" datatype="html" approved="yes">
+        <source>Password</source>
+        <target state="translated">Mot de passe</target>
+      </trans-unit>
+      <trans-unit id="d7b35c384aecd25a516200d6921836374613dfe7" datatype="html" approved="yes">
+        <source>Cancel</source>
+        <target state="translated">Annuler</target>
+      </trans-unit>
+      <trans-unit id="f384e03c86eea481be4697ecde3b48fdca0a13d0" datatype="html" approved="yes">
+        <source>Preferences</source>
+        <target state="translated">Préférences</target>
+      </trans-unit>
+      <trans-unit id="d99438c112b9dced5ff42a86ba735920a3ca16e0" datatype="html" approved="yes">
+        <source>Languages Movies</source>
+        <target state="translated">Langues(Films)</target>
+      </trans-unit>
+      <trans-unit id="1e7119efae3df4ababaa15841c0c3e311f431f65" datatype="html" approved="yes">
+        <source>Languages TV Shows</source>
+        <target state="translated">Langues (Séries)</target>
+      </trans-unit>
+      <trans-unit id="adfa929aa45788e9611b89dd5e41abcea8836138" datatype="html" approved="yes">
+        <source>Qualities</source>
+        <target state="translated">Qualités</target>
+      </trans-unit>
+      <trans-unit id="52c9a103b812f258bcddc3d90a6e3f46871d25fe" datatype="html" approved="yes">
+        <source>Save</source>
+        <target state="translated">Sauvegarder</target>
+      </trans-unit>
+      <trans-unit id="8469f37b3d6a181238f746ecfa2b2c13d1c12701" datatype="html" approved="yes">
+        <source>Password Modification</source>
+        <target state="translated">Mise à jour du mot de passe</target>
+      </trans-unit>
+      <trans-unit id="1ae3dcf96b494406b6fd6fbd2f15f7259553bf4d" datatype="html" approved="yes">
+        <source>Current Password</source>
+        <target state="translated">Mot de passe actuel</target>
+      </trans-unit>
+      <trans-unit id="e5f24fc7a2bf50bd61d109dd9cad3fbff6ec7add" datatype="html" approved="yes">
+        <source>Required</source>
+        <target state="translated">Requis</target>
+      </trans-unit>
+      <trans-unit id="c7014c6360e94b236286b869c3fe0ea9911c0387" datatype="html" approved="yes">
+        <source>New Password</source>
+        <target state="translated">Nouveau mot de passe</target>
+      </trans-unit>
+      <trans-unit id="6634f07dd7498f7e3ba34c6fb600c221aa8965d9" datatype="html" approved="yes">
+        <source>The password don't match</source> <target state="translated">Les mots de passe sont différents</target> </trans-unit>
+      <trans-unit id="71c77bb8cecdf11ec3eead24dd1ba506573fa9cd" datatype="html" approved="yes">
+        <source>Submit</source>
+        <target state="translated">Envoyer</target>
+      </trans-unit>
+      <trans-unit id="fe46ccaae902ce974e2441abe752399288298619" datatype="html" approved="yes">
+        <source>Language</source>
+        <target state="translated">Langue</target>
+      </trans-unit>
+      <trans-unit id="d14b457783fca09fc5b1a5b9ec712cb59e06d0f3" datatype="html" approved="yes">
+        <source>Quality</source>
+        <target state="translated">Qualité</target>
+      </trans-unit>
+      <trans-unit id="7faaaa08f56427999f3be41df1093ce4089bbd75" datatype="html" approved="yes">
+        <source>Size</source>
+        <target state="translated">Taille</target>
+      </trans-unit>
+      <trans-unit id="205c33d626f4654f36d9d7dcea6f9d9e9b2a7ec7" datatype="html" approved="yes">
+        <source>Codec</source>
+        <target state="translated">Codec</target>
+      </trans-unit>
+      <trans-unit id="dc75033a5238fdc4f462212c847a45ba8018a3fd" datatype="html" approved="yes">
+        <source>Download</source>
+        <target state="translated">Télécharger</target>
+      </trans-unit>
+      <trans-unit id="2c4004f839cb1340d36652f42554bfd8e200e458" datatype="html" approved="yes">
+        <source>Wrong Identification</source>
+        <target state="translated">Mauvaise identification</target>
+      </trans-unit>
+      <trans-unit id="95b9dc857f4a7176664d3f9c676bbc9a65c4d82a" datatype="html" approved="yes">
+        <source>Number of site</source>
+        <target state="translated">Nombre de site</target>
+      </trans-unit>
+      <trans-unit id="edf9a55268766fcacad643cce36b76af799b6edc" datatype="html" approved="yes">
+        <source>Number of movies</source>
+        <target state="translated">Nombre de films</target>
+      </trans-unit>
+      <trans-unit id="6873b8572ae823be4f188c9e1d0a0ed0ac5078ca" datatype="html" approved="yes">
+        <source>Number of episodes</source>
+        <target state="translated">Nombre d'épisodes</target>
+      </trans-unit>
+      <trans-unit id="b2d883f6d32d56e46fe45fa212682febff0c59cb" datatype="html" approved="yes">
+        <source>Number of unknowns</source>
+        <target state="translated">Nombre d'inconnus</target>
+      </trans-unit>
+      <trans-unit id="68b3b4961082994434885702f1f34bbf7d96b960" datatype="html" approved="yes">
+        <source>Redo unknowns</source>
+        <target state="translated">Refaire inconnus</target>
+      </trans-unit>
+      <trans-unit id="e40bb2b2d539bed07c9a5a6ab9eb2f3bb837d57f" datatype="html" approved="yes">
+        <source>Scan all</source>
+        <target state="translated">Tout scanner</target>
+      </trans-unit>
+      <trans-unit id="78ae490a5a4849175064b28015fbaf08bbf1379f" datatype="html" approved="yes">
+        <source>Scan now</source>
+        <target state="translated">Scanner</target>
+      </trans-unit>
+      <trans-unit id="f6755cff4957d5c3c89bafce5651f1b6fa2b1fd9" datatype="html" approved="yes">
+        <source>Add</source>
+        <target state="translated">Ajouter</target>
+      </trans-unit>
+      <trans-unit id="484d369ab6d7e37d808403e2141c38c01f6f9911" datatype="html" approved="yes">
+        <source>Url</source>
+        <target state="translated">Url</target>
+      </trans-unit>
+      <trans-unit id="81b97b8ea996ad1e4f9fca8415021850214884b1" datatype="html" approved="yes">
+        <source>Status</source>
+        <target state="translated">Statut</target>
+      </trans-unit>
+      <trans-unit id="0a21f3e171d6858672edd3510039a9fb003668a8" datatype="html" approved="yes">
+        <source>Last scan</source>
+        <target state="translated">Dernier scan</target>
+      </trans-unit>
+      <trans-unit id="b55b039afd3b0233f867a0dbbefe6aecd383452e" datatype="html" approved="yes">
+        <source>Movie</source>
+        <target state="translated">Film</target>
+      </trans-unit>
+      <trans-unit id="fa426777a1641d18f40c716008129b0ec69db958" datatype="html" approved="yes">
+        <source>Episodes</source>
+        <target state="translated">Episode</target>
+      </trans-unit>
+      <trans-unit id="ea162c3ec950c488e38b66f67914f12093c0debc" datatype="html" approved="yes">
+        <source>Unknowns</source>
+        <target state="translated">Inconnus</target>
+      </trans-unit>
+      <trans-unit id="8cd698f75fc0f081f27bdf0004d13f7d27d1f32c" datatype="html" approved="yes">
+        <source>Scan</source>
+        <target state="translated">Scan</target>
+      </trans-unit>
+      <trans-unit id="e5f16b542e3154cb107f4adedef050543594ffd6" datatype="html" approved="yes">
+        <source>Commands</source>
+        <target state="translated">Commandes</target>
+      </trans-unit>
+      <trans-unit id="70a67e04629f6d412db0a12d51820b480788d795" datatype="html" approved="yes">
+        <source>Create</source>
+        <target state="translated">Créer</target>
+      </trans-unit>
+      <trans-unit id="2798cc1e152b1ec07fd8daf94a2a073d1ba1ebcc" datatype="html" approved="yes">
+        <source>Id</source>
+        <target state="translated">Id</target>
+      </trans-unit>
+      <trans-unit id="f50a33d3c339f8f4a465141f8caa5d2d8c005251" datatype="html" approved="yes">
+        <source>Enabled</source>
+        <target state="translated">Activé</target>
+      </trans-unit>
+      <trans-unit id="edef1e15f2e0092bc502e11f80fa7ad39e390fdd" datatype="html" approved="yes">
+        <source>Authorities</source>
+        <target state="translated">Grades</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

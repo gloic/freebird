@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default" *ngIf="isAuthenticated()">
+  <div class="container-fluid">
+    <div class="navbar-header">Freebird</div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a routerLink="/dashboard" routerLinkActive="active" i18n>Dashboard</a></li>
+        <li><a routerLink="/movies" routerLinkActive="active" i18n>Movies</a></li>
+        <li><a routerLink="/test-component" routerLinkActive="active" i18n>Test</a></li>
+        <li><a routerLink="/tv-shows" routerLinkActive="active" i18n>Tv Shows</a></li>
+        <li><a routerLink="/identification" routerLinkActive="active" i18n>Identification</a></li>
+        <li *ngIf="isAdmin()"><a routerLink="/admin" routerLinkActive="active" i18n>Administration</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a routerLink="/preferences" routerLinkActive="active"><span class="glyphicon glyphicon-wrench"></span></a></li>
+        <li><a href="#" (click)="logout()"><span class="glyphicon glyphicon-off"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

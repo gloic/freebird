@@ -1,0 +1,57 @@
+<div class="col-sm-3 col-centered">
+  <div class="btn-group" data-toggle="buttons">
+    <p-selectButton [options]="searchModes" [(ngModel)]="selectedSearchMode"></p-selectButton>
+  </div>
+  <div id="search-component">
+    <input #searchBox id="search-box" (keyup)="search(searchBox.value)"/>
+    <div>
+      <div *ngFor="let result of results | async" class="search-result">
+        <div [ngSwitch]="selectedSearchMode">
+          <div *ngSwitchCase="'tv'">
+            <span [routerLink]="['/tv-shows/', result.id]">{{result.title}}</span>
+          </div>
+          <div *ngSwitchCase="'movie'">
+            <span [routerLink]="['/movies/', result.id]">{{result.title}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p-carousel i18n-headerText headerText="Latest movies" [value]="topMovies" numVisible="5">
+  <ng-template let-movie pTemplate="item">
+    <div class="ui-g">
+      <a [routerLink]="['/movies/', movie.id]">
+        <div class="ui-grid-col-12">
+          <media-poster [posterPath]="movie.posterPath" [width]="150"></media-poster>
+        </div>
+        <div class="ui-g-12">{{movie.title}}</div>
+      </a>
+    </div>
+  </ng-template>
+</p-carousel>
+
+<p-carousel i18n-headerText headerText="Latest episodes" [value]="topEpisodes" numVisible="5">
+  <ng-template let-episode pTemplate="item">
+    <div class="ui-g">
+      <div class="ui-g-12">
+        <a [routerLink]="['/tv-shows/', episode.tvShow.id, episode.season.id, episode.id]">
+          <media-poster [posterPath]="episode.stillPath" [mini]="true" [width]="150"></media-poster>
+        </a>
+      </div>
+      <div class="ui-g-12">
+        <a [routerLink]="['/tv-shows/', episode.tvShow.id]">{{episode.tvShow.title}}</a>
+      </div>
+      <div class="ui-g-12">
+        <a [routerLink]="['/tv-shows/', episode.tvShow.id, episode.season.id]">
+          Season {{episode.season.seasonNumber}}
+        </a>
+        <a [routerLink]="['/tv-shows/', episode.tvShow.id, episode.season.id, episode.id]">
+          Episode {{episode.episodeNum}}
+        </a>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>
+

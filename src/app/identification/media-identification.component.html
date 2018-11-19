@@ -1,0 +1,54 @@
+<a href="https://www.themoviedb.org/" target="_blank">themoviedb.org</a>
+
+<p-dataTable [value]="unknownMedias" [lazy]="true" [rows]="100" [paginator]="true" [totalRecords]="totalRecords" (onLazyLoad)="loadCarsLazy($event)">
+  <p-column field="link.fileName" header="File Name" [sortable]="true"></p-column>
+  <p-column field="link.size" header="Size" [sortable]="true">
+    <template let-col let-media="rowData" let-ri="rowIndex" pTemplate="body">
+      <span>{{media[col.field] | fileSize}}</span>
+    </template>
+  </p-column>
+  <p-column field="link.parentUrl" header="Parent Url" [filter]="true" filterPlaceholder="Search" filterMatchMode="contains"></p-column>
+  <p-column field="link.url" header="Url"></p-column>
+  <p-column header="Commands">
+    <template pTemplate type="header">
+      <button type="button" pButton icon="fa-check"></button>
+    </template>
+    <template let-media="rowData" pTemplate="body">
+      <button type="button" pButton icon="fa-search" (click)="rescan(media)" class="btn btn-default">Rescan</button>
+      <button (click)="showDialog(media)" pButton icon="fa-external-link-square" label="Show" class="btn btn-default">Identify</button>
+      <button (click)="ignoreFolder(media)" pButton icon="fa-external-link-square" label="Show" class="btn btn-default">Ignore Folder</button>
+
+    </template>
+  </p-column>
+</p-dataTable>
+
+<p-dialog header="Title" [(visible)]="display">
+  <p-selectButton [options]="mediaTypes" [(ngModel)]="selectedMediaType"></p-selectButton>
+  <div [ngSwitch]="selectedMediaType">
+    <div *ngSwitchCase="'episode'">
+      <label for="tvShowTitle" class="col-lg-2 control-label">Tv Show Title</label>
+      <input type="text" class="form-control" id="tvShowTitle" #tvShowTitle>
+      <label for="season" class="col-lg-2 control-label">Season</label>
+      <input type="text" class="form-control" id="season" #season>
+      <label for="episode" class="col-lg-2 control-label">Episode</label>
+      <input type="text" class="form-control" id="episode" #episode>
+      <button (click)="identifyEpisode(tvShowTitle.value, season.value, episode.value)" class="btn btn-default">Identify</button>
+    </div>
+    <div *ngSwitchCase="'movie'">
+      <label for="movieTitle" class="col-lg-2 control-label">Title</label>
+      <input type="text" class="form-control" id="movieTitle" #movieTitle placeholder="Title">
+      <button (click)="identifyMovie(movieTitle.value)" class="btn btn-default">Identity</button>
+
+      <div *ngIf="foundMovie">
+        {{foundMovie.title}}
+      </div>
+    </div>
+    <div *ngSwitchCase="'season'">
+      <label for="seasonTvShowTitle" class="col-lg-2 control-label">Tv Show Title</label>
+      <input type="text" class="form-control" id="seasonTvShowTitle" #seasonTvShowTitle>
+      <label for="SeasonSeason" class="col-lg-2 control-label">Season</label>
+      <input type="text" class="form-control" id="SeasonSeason" #seasonSeason>
+      <button (click)="identifySeason(seasonTvShowTitle.value, seasonSeason.value)" class="btn btn-default">Identify</button>
+    </div>
+  </div>
+</p-dialog>

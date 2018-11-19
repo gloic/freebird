@@ -1,0 +1,23 @@
+<form class="well form-horizontal col-lg-4 col-centered">
+  <fieldset>
+    <legend i18n>Login</legend>
+    <div class="form-group">
+      <label for="username" class="col-lg-2 control-label" i18n>Username</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="username" #username placeholder="Username">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword" class="col-lg-2 control-label" i18n>Password</label>
+      <div class="col-lg-10">
+        <input #password type="password" class="form-control" id="inputPassword" placeholder="Password">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default" i18n>Cancel</button>
+        <button (click)="onLoginClicked(username.value, password.value)" type="submit" class="btn btn-primary" i18n>Login</button>
+      </div>
+    </div>
+  </fieldset>
+</form>

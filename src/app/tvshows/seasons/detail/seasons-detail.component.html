@@ -1,0 +1,33 @@
+<div *ngIf="season" class="ui-g-row">
+  <breadcrumb-tv [season]="season"></breadcrumb-tv>
+  <div class="ui-g">
+    <div class="ui-g-8"><h2>{{season.tvShow.title}}</h2></div>
+    <div class="ui-g-3"><h4>Season {{season.seasonNumber}}</h4></div>
+    <div class="ui-g-1">
+      <a class="appLink" [class.displayModeSelected]="displayMode == 'grid'" (click)="displayAs('grid')">
+        <span style="font-size:2em;" class="glyphicon glyphicon-th-large"></span></a>
+      <a class="appLink" [class.displayModeSelected]="displayMode == 'list'" (click)="displayAs('list')">
+        <span style="font-size:2em;" class="glyphicon glyphicon-th-list"></span></a>
+    </div>
+  </div>
+
+  <div [ngSwitch]="displayMode">
+    <div *ngSwitchCase="'grid'">
+      <p-dataGrid class="ui-g-row" [value]="season.episodes">
+        <template let-episode pTemplate="item">
+          <div class="ui-g-12 ui-lg-2 ui-md-4">
+            <a [routerLink]="['/tv-shows/', tvShowId, seasonId, episode.id]">
+              <episode-list-item [episode]="episode" [seasonId]="seasonId" [tvShowId]="tvShowId"></episode-list-item>
+            </a>
+          </div>
+        </template>
+      </p-dataGrid>
+    </div>
+    <div *ngSwitchCase="'list'" class="ui-g-8">
+      <div *ngFor="let episode of season.episodes">
+        <span i18n>Episode</span> {{episode.episodeNum}}: {{episode.title}} (<span i18n>Air date</span>: {{episode.airDate | date}})
+        <media-links [links]="episode.links"></media-links>
+      </div>
+    </div>
+  </div>
+</div>

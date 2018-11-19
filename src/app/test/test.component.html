@@ -1,0 +1,25 @@
+<div class="search-results"
+     data-infinite-scroll
+     debounce
+     [infiniteScrollDistance]="0.2"
+     [infiniteScrollUpDistance]="scrollUpDistance"
+     [infiniteScrollThrottle]="throttle"
+     (scrolled)="onScrollDown()"
+     (scrolledUp)="onUp()">
+
+
+  <!--<p-dataGrid [value]="array">-->
+    <!--<template let-movie pTemplate="item">-->
+      <!--<div class="ui-g-12 ui-lg-2 ui-md-4">-->
+        <!--<a [routerLink]="['/movies/', movie.id]">-->
+          <!--<test-list-item [movie]="movie"></test-list-item>-->
+        <!--</a>-->
+      <!--</div>-->
+    <!--</template>-->
+  <!--</p-dataGrid>-->
+
+  <p *ngFor="let i of array">
+    {{ i.title }}<br>
+    {{ i.posterPath }}
+  </p>
+</div>

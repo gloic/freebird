@@ -1,0 +1,9 @@
+<div>
+  <media-poster [posterPath]="season.posterPath" [width]="150"></media-poster>
+  <h5>
+    Season {{season.seasonNumber}}
+    <span *ngIf="season.episodeCountInDB >= season.episodeCount"><span class="glyphicon glyphicon-star"></span></span>
+    <span *ngIf="season.episodeCountInDB < season.episodeCount"> ({{season.episodeCountInDB}} / {{season.episodeCount}})</span>
+  </h5>
+
+</div>

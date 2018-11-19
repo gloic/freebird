@@ -1,0 +1,3 @@
+<media-poster [posterPath]="episode.stillPath" [mini]="true"></media-poster>
+<span *ngIf="('Episode ' + episode.episodeNum) != episode.title" class="episode-title ui-g">{{episode.title}}</span>
+<span class="episode-number ui-g"><span i18n>Episode</span> {{episode.episodeNum}}</span>

@@ -1,0 +1,55 @@
+.content-container {
+  margin-left: 1%;
+  margin-right: 1%;
+}
+.item-list {
+  margin-top: 2%;
+}
+
+.item-list-container {
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.search-result{
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  width:400px;
+  padding: 5px;
+  background-color: #0f0f0f;
+  cursor: pointer;
+  font-size: xx-large;
+}
+#search-box{
+  background-color: #0f0f0f;
+  font-size: xx-large;
+  width: 400px;
+  height: 60px;
+}
+
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}
+
+.myTable td:nth-child(1) {
+  width: 20px;
+}
+
+.ui-datatable-tablewrapper {
+  text-align: center;
+}
+
+a.appLink {
+  color: #cccccc;
+}
+
+a.displayModeSelected {
+  color: #2a9fd6;
+}
+
+input.ng-dirty.ng-invalid
+{
+  border:1px solid #f00;
+}

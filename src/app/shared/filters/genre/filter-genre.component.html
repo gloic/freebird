@@ -1,0 +1,5 @@
+GENRES
+<div *ngFor="let genre of genres">
+  <span *ngIf="selectedGenre == genre || (selectedGenre === undefined && genre.id == undefined)" class="	glyphicon glyphicon-chevron-right"></span>
+  <a href="javascript:void(0)" class="appLink" (click)="onGenreSelected(genre)" [class.selected]="selectedGenre == genre || (selectedGenre === undefined && genre.id == undefined)">{{genre.name}}</a>
+</div>

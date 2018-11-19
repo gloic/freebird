@@ -1,0 +1,23 @@
+<div *ngIf="episode" class="ui-g">
+
+  <breadcrumb-tv [episode]="episode"></breadcrumb-tv>
+
+  <div class="ui-g-12">
+    <div class="ui-g-4">
+      <media-poster [posterPath]="episode.stillPath" [width]="250"></media-poster>
+    </div>
+    <div class="ui-g-8">
+      <div class="ui-g-12">{{episode.title}}</div>
+      <div class="ui-g-12">Season {{episode.season.seasonNumber}} - Episode {{episode.episodeNum}}</div>
+      <div class="ui-g-12">
+        <p>{{episode.overview}}</p>
+      </div>
+      <div class="ui-g-6">
+        <media-links [links]="episode.links" (onBadIdentificationEvent)="onBadIdentificationEvent($event)"></media-links>
+      </div>
+    </div>
+  </div>
+  <!--<video width="1024" height="768" controls>-->
+    <!--<source src="{{episode.url}}" type="video/webm">-->
+  <!--</video>-->
+</div>

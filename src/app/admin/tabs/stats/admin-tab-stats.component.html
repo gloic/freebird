@@ -1,0 +1,21 @@
+<p-panel header="Stats">
+  <div *ngIf="model.sites">
+    <a><span (click)="onRefreshClicked()" class="glyphicon glyphicon-refresh"></span></a>
+    <div><span i18n>Number of site</span>: {{model.sites?.length}}</div>
+    <div><span i18n>Number of movies</span>: {{model.nbMovies}} <span *ngIf="model.nbMoviesNew" class="label label-default">+{{model.nbMoviesNew}}</span></div>
+    <div><span i18n>Number of episodes</span>: {{model.nbEpisodes}} <span *ngIf="model.nbEpisodesNew" class="label label-default">+{{model.nbEpisodesNew}}</span></div>
+    <div><span i18n>Number of unknowns</span>: {{model.nbUnknowns}} <span *ngIf="model.nbUnknownsNew" class="label label-default">+{{model.nbUnknownsNew}}</span></div>
+    <p-checkbox #redoUnknownsAll binary="true" i18n-label label="Redo unknowns"></p-checkbox>
+    <button (click)="onScanAllClicked(redoUnknownsAll)" class="btn btn-default" i18n>Scan all</button>
+  </div>
+</p-panel>
+<p-panel header="Import/Export">
+  <div>
+    Export
+    <button (click)="onExportSitesClicked()" class="btn btn-default">Export Sites</button>
+  </div>
+  <div class="ui-g">
+    Import
+    <input type="file" (change)="fileChange($event)" [(ngModel)]="file" placeholder="Upload file" accept=".txt" class="btn btn-default">
+  </div>
+</p-panel>

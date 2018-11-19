@@ -1,0 +1,28 @@
+<p-breadcrumb [model]="breadCrumb"></p-breadcrumb>
+<div class="ui-grid-row">
+  <div class="ui-grid-col-1">
+    <freebird-filters-order [orders]="orders" [selectedOrder]="selectedOrder" (orderByEvent)="orderByEvent($event)"></freebird-filters-order>
+    <freebird-filters-genre [genres]="genres" [selectedGenre]="selectedGenre" (onGenreSelectedEvent)="addFilterGenre($event)"></freebird-filters-genre>
+  </div>
+  <div class="ui-grid-col-11">
+  <p-dataGrid [value]="movies">
+    <template let-movie pTemplate="item">
+      <div class="ui-g-12 ui-lg-2 ui-md-4">
+        <a [routerLink]="['/movies/', movie.id]">
+          <movie-list-item [movie]="movie"></movie-list-item>
+        </a>
+      </div>
+    </template>
+  </p-dataGrid>
+
+  </div>
+</div>
+
+<!--<ul id="infinite-scroller"-->
+    <!--appInfiniteScroller-->
+    <!--scrollPerecnt="70"-->
+    <!--immediateCallback="true"-->
+    <!--[scrollCallback]="scrollCallback"-->
+<!--&gt;-->
+  <!--<li *ngFor="let item of movies">{{item.title}}</li>-->
+<!--</ul>-->

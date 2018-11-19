@@ -1,0 +1,35 @@
+<div *ngIf="tvShow">
+  <breadcrumb-tv [tvShow]="tvShow"></breadcrumb-tv>
+
+  <div class="ui-g">
+    <div class="ui-g-4">
+      <media-poster [posterPath]="tvShow.posterPath" [width]="200"></media-poster>
+    </div>
+    <div class="ui-g-8">
+      <div class="ui-g">
+        <div class="ui-g-6">
+          <h3>{{tvShow.title}}</h3>
+        </div>
+        <div class="ui-g-6 show-detail-year">
+          <h3>{{tvShow.firstAirDate | date: 'y'}}</h3>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-12">
+          <p>{{tvShow.overview}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="ui-g-12">
+      <p-dataGrid [value]="tvShow.seasons">
+        <template let-season pTemplate="item">
+          <div class="ui-g-12 ui-lg-2 ui-md-4">
+            <a [routerLink]="['/tv-shows/', tvShow.id, season.id]">
+              <season-list-item [season]="season"></season-list-item>
+            </a>
+          </div>
+        </template>
+      </p-dataGrid>
+    </div>
+  </div>
+</div>

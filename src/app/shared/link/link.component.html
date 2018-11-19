@@ -1,0 +1,39 @@
+<p-confirmDialog header="Confirmation" icon="fa fa-question-circle" width="425"></p-confirmDialog>
+
+<p-dataTable [value]="links" sortField="size">
+
+  <p-column field="language"  i18n-header header="Language" [style]="{'width':'70px', 'text-align':'center'}"></p-column>
+
+  <p-column field="quality"  i18n-header header="Quality" [style]="{'width':'70px'}">
+    <template let-col let-link="rowData" let-ri="rowIndex" pTemplate="body">
+      <span>{{link[col.field] | fileQuality}}</span>
+    </template>
+  </p-column>
+
+  <p-column field="size"  i18n-header header="Size" [style]="{'width':'70px'}">
+    <template let-col let-link="rowData" let-ri="rowIndex" pTemplate="body">
+      <span>{{link[col.field] | fileSize}}</span>
+    </template>
+  </p-column>
+
+  <p-column field="codec"  i18n-header header="Codec" [style]="{'width':'70px'}">
+    <template let-col let-link="rowData" let-ri="rowIndex" pTemplate="body">
+      <span>{{link[col.field] | fileCodec}}</span>
+    </template>
+  </p-column>
+
+  <p-column [style]="{'width':'75px'}">
+    <template pTemplate="header" i18n>Download</template>
+    <template let-link="rowData" pTemplate="body">
+      <a [href]="link.url" download>
+        <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+      </a>
+    </template>
+  </p-column>
+  <p-column [style]="{'width':'80px'}">
+    <template pTemplate="header" i18n>Wrong Identification</template>
+    <template let-link="rowData" pTemplate="body">
+      <a href="javascript:void(0)" (click)="confirm(link)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+    </template>
+  </p-column>
+</p-dataTable>

@@ -1,0 +1,2 @@
+<img *ngIf="!mini" src="http://image.tmdb.org/t/p/w780{{posterPath}}" [attr.width]="width" onError="this.src='assets/images/noposter.png'"/>
+<img *ngIf="mini" src="http://image.tmdb.org/t/p/w150{{posterPath}}" [attr.width]="width" onError="this.src='assets/images/noposter-mini.png'"/>

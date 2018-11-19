@@ -1,0 +1,5 @@
+ORDER BY
+<div *ngFor="let order of orders">
+  <span *ngIf="selectedOrder == order" class="glyphicon glyphicon-chevron-right"></span>
+  <a href="javascript:void(0)" class="appLink" (click)="orderByClicked(order)" [class.selected]="selectedOrder == order">{{order.title}}</a>
+</div>

@@ -1,0 +1,18 @@
+<p-breadcrumb [model]="breadCrumb"></p-breadcrumb>
+<div>
+  <div class="ui-grid-col-1">
+    <freebird-filters-order [orders]="orders" [selectedOrder]="selectedOrder" (orderByEvent)="orderByEvent($event)"></freebird-filters-order>
+    <freebird-filters-genre [genres]="genres" [selectedGenre]="selectedGenre" (onGenreSelectedEvent)="addFilterGenre($event)"></freebird-filters-genre>
+  </div>
+  <div class="ui-grid-col-11">
+  <p-dataGrid [value]="tvShows">
+    <ng-template let-tvShow pTemplate="item">
+      <div class="ui-g-12 ui-lg-2 ui-md-4">
+        <a [routerLink]="['/tv-shows/', tvShow.id]">
+          <tv-show-list-item [tvShow]="tvShow"></tv-show-list-item>
+        </a>
+      </div>
+    </ng-template>
+  </p-dataGrid>
+  </div>
+</div>
