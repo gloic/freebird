@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.gloic.freebird</groupId>
+        <artifactId>freebird-server</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>freebird-core</artifactId>
+    <name>${project.name} :: Core</name>
+    <properties>
+        <start-class>com.gloic.freebird.Application</start-class>
+    </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.gloic.freebird</groupId>
+            <artifactId>freebird-persistence</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.gloic.freebird</groupId>
+            <artifactId>freebird-webservices</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.gloic.freebird</groupId>
+            <artifactId>freebird-services</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.gloic.freebird</groupId>
+            <artifactId>freebird-security</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>h2</id>
+            <properties>
+                <run.profiles>h2</run.profiles>
+                <spring.datasource.platform>h2</spring.datasource.platform>
+            </properties>
+        </profile>
+        <profile>
+            <id>mysql</id>
+            <properties>
+                <run.profiles>mysql</run.profiles>
+                <spring.datasource.platform>mysql</spring.datasource.platform>
+            </properties>
+        </profile>
+    </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>${start-class}</mainClass>
+                    <jvmArguments>
+                        -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005
+                    </jvmArguments>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>

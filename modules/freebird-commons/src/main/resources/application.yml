@@ -1,0 +1,111 @@
+server:
+port:8008
+# Define JWT token parameters
+jwt:
+# validity duration (in seconds)
+expiration:604800
+# Header's name that will contain the token
+header:Authorization
+# Key used to generate the token. Do not share
+# Change this value!
+secret:mySecret
+# Logging levels
+logging:
+file:server.log
+level:
+com:
+gloic:INFO
+gloic.freebird.services:
+parser:INFO
+scraper:INFO
+#        org.hibernate.SQL: DEBUG
+#Parsers configuration
+parser:
+thresholds:
+# Some sites contains traps, like "adf.ly" links or infinite loop to main page.
+# If number of invalid redirect is reached, the site's browsing is stopped
+invalidRedirection:10
+# Cron expression to schedule a scan of all sites. Default value: every day at midnight.
+cron:"0 0 0 * * *"
+# Scraper configuration
+scraper:
+# The medias can be scraped during the site's exploration or after, in a queue.
+# asynchronous mode permits to crawl multiple sites and let the scraper does its job later
+asynchronous:true
+movie:
+# Minimal length of a movie title. If parsed length is inferior, the
+#  media won't be scraped and sent to 'unknowns'
+titleMinLength:3
+# API key
+themoviedatabase:
+apikey:
+# Place here your API key
+v3:YOUR_API_KEY
+# Language for data retrieved from API
+lang:fr
+spring:
+jpa:
+hibernate:
+use-new-id-generator-mappings:true
+# The following part define the possibles profiles
+# use the following pattern to activate it: -Dspring.profiles.active=mysql
+# Note: spring profiles must be specified BEfORE the -jar in the command line.
+# For example: java -Dspring.profiles.active=mysql -jar freebird.jar
+---
+# Disposable H2 database, used by the test or dev phase
+spring:
+profiles:default
+datasource:
+platform:h2
+driverClassName:org.h2.Driver
+url:jdbc:h2:~/freebird-default;DB_CLOSE_ON_EXIT=FALSE
+username:sa
+password:''
+jpa:
+database-platform:org.hibernate.dialect.H2Dialect
+hibernate:
+ddl-auto:create-drop
+---
+# local H2 database that is not cleaned at launch.
+spring:
+profiles:h2
+datasource:
+platform:h2
+driverClassName:org.h2.Driver
+url:jdbc:h2:~/freebird;DB_CLOSE_ON_EXIT=FALSE
+username:sa
+password:''
+jpa:
+database-platform:org.hibernate.dialect.H2Dialect
+hibernate:
+ddl-auto:update
+use-new-id-generator-mappings:true
+---
+# local MYSQL database. Used for fast scraping and export to the prod DB
+spring:
+profiles:mysql
+datasource:
+platform:mysql
+url:jdbc:mysql://localhost:3306/freebird
+username:freebird
+password:freebird
+driverClassName:com.mysql.jdbc.Driver
+jpa:
+database-platform:org.hibernate.dialect.MySQL5Dialect
+hibernate:
+ddl-auto:update
+---
+# Production database
+spring:
+profiles:prod
+datasource:
+platform:mysql
+# Change IP address if necessary
+url:jdbc:mysql://127.0.0.1:3306/freebird
+username:freebird
+password:freebird
+driverClassName:com.mysql.jdbc.Driver
+jpa:
+database-platform:org.hibernate.dialect.MySQL5Dialect
+hibernate:
+ddl-auto:update
